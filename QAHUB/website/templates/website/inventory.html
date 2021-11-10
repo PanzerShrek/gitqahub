@@ -1,0 +1,58 @@
+<!--- FEATURE find all batches where material was used
+Different orders for same material? --->
+
+
+
+{% include 'website/home.html' %} 
+
+
+{% block content %} 
+
+<h1>Inventory Manager</h1>
+
+	
+		<li class="nav-item"><a href="{% url 'entry' %}" class="nav-link text-uppercase font-weight-bold">Upload New Inventory</a></li> 
+		<!--Link to entry.html -->
+	</ul>
+
+
+
+			<br>
+
+			<div class="row">
+				<div class="col-md">
+					<div class="card card-body">
+						<h1>Current Inventory</h1>
+					</div>
+					<div class="card card-body">
+						<table class="table">
+							<tr>
+								<th>Material</th>
+								<th>Material Code</th>
+								<th></th>
+							</tr>
+							
+
+							
+							{% for i in items %}
+							
+						
+								<tr>
+									<td>{{i.Name_of_the_Material_per_specification}}</td>
+									<td>{{i.Site_Material_Code }}</td>
+									<td><a class="btn btn-sm btn-info" href="{% url 'receipt' i.id %}">View</a></td>
+									
+									
+								</tr>
+								
+							
+							{% endfor %}
+							
+						</table>
+					</div>
+				</div>
+				
+			</div>
+
+	{% endblock content %}
+

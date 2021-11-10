@@ -1,0 +1,24 @@
+{% load static %}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}"> 
+
+    <nav class="navbar navbar-dark bg-dark"><a href="{% url 'home' %}" class="navbar-brand text-uppercase font-weight-bold">QA HUB</a>
+            
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="{% url 'home' %}" class="nav-link text-uppercase font-weight-bold">Home <span class="sr-only"></span></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Batch Record</a></li>
+                    <li class="nav-item"><a href="{% url 'inventory' %}" class="nav-link text-uppercase font-weight-bold">Inventory</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">QC</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Documents</a></li>
+                </ul>
+         
+       <!-- <script src="script.js" charset="uth"></script> -->
+    </nav>
+
+
+
+<!-- Add Style Sheet
+Sign In
+Nav Bar
+-->
